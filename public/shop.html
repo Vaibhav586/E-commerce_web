@@ -1,0 +1,219 @@
+<!-- ================= ENHANCED PRODUCT LISTING PAGE ================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop All - BrandName</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+<!-- Include header from main page -->
+<header class="site-header" role="banner">
+  <!-- Same header content as index.html -->
+</header>
+
+<main class="plp-page">
+  <div class="plp-header">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+          <li><a href="/">Home</a></li>
+          <li><a href="/shop">Shop</a></li>
+          <li aria-current="page">All Products</li>
+        </ol>
+      </nav>
+      
+      <div class="plp-title-section">
+        <h1>Shop All</h1>
+        <p class="plp-description">Discover your next main character moment</p>
+      </div>
+      
+      <div class="plp-controls">
+        <div class="view-toggle">
+          <button class="view-btn active" data-view="grid" aria-label="Grid view">⊞</button>
+          <button class="view-btn" data-view="list" aria-label="List view">☰</button>
+        </div>
+        
+        <div class="sort-dropdown">
+          <select aria-label="Sort products">
+            <option value="featured">Featured</option>
+            <option value="newest">Newest</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="rating">Best Rating</option>
+          </select>
+        </div>
+        
+        <button class="filter-toggle mobile-only">Filters</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="plp-content container">
+    <aside class="filters-sidebar" role="complementary">
+      <div class="filters-header">
+        <h2>Filters</h2>
+        <button class="clear-filters">Clear All</button>
+      </div>
+      
+      <div class="filter-group">
+        <h3>Category</h3>
+        <div class="filter-options">
+          <label><input type="checkbox" value="dresses"> Dresses <span>(24)</span></label>
+          <label><input type="checkbox" value="tops"> Tops <span>(18)</span></label>
+          <label><input type="checkbox" value="bottoms"> Bottoms <span>(15)</span></label>
+          <label><input type="checkbox" value="outerwear"> Outerwear <span>(8)</span></label>
+        </div>
+      </div>
+      
+      <div class="filter-group">
+        <h3>Size</h3>
+        <div class="filter-options size-grid">
+          <button class="size-filter" data-size="xs">XS</button>
+          <button class="size-filter" data-size="s">S</button>
+          <button class="size-filter" data-size="m">M</button>
+          <button class="size-filter" data-size="l">L</button>
+          <button class="size-filter" data-size="xl">XL</button>
+          <button class="size-filter" data-size="2xl">2XL</button>
+        </div>
+      </div>
+      
+      <div class="filter-group">
+        <h3>Color</h3>
+        <div class="color-filters">
+          <button class="color-filter" data-color="black" style="background: #000" aria-label="Black"></button>
+          <button class="color-filter" data-color="white" style="background: #fff; border: 1px solid #ccc" aria-label="White"></button>
+          <button class="color-filter" data-color="red" style="background: #ff4444" aria-label="Red"></button>
+          <button class="color-filter" data-color="blue" style="background: #4444ff" aria-label="Blue"></button>
+          <button class="color-filter" data-color="green" style="background: #44ff44" aria-label="Green"></button>
+          <button class="color-filter" data-color="pink" style="background: #ff44ff" aria-label="Pink"></button>
+        </div>
+      </div>
+      
+      <div class="filter-group">
+        <h3>Price Range</h3>
+        <div class="price-range">
+          <input type="range" min="0" max="200" value="200" class="price-slider">
+          <div class="price-display">
+            <span>$0</span>
+            <span>$200</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="filter-group">
+        <h3>Features</h3>
+        <div class="filter-options">
+          <label><input type="checkbox" value="sustainable"> Sustainable</label>
+          <label><input type="checkbox" value="new"> New Arrivals</label>
+          <label><input type="checkbox" value="sale"> On Sale</label>
+          <label><input type="checkbox" value="exclusive"> Exclusive</label>
+        </div>
+      </div>
+    </aside>
+    
+    <section class="products-section" role="main">
+      <div class="results-header">
+        <p class="results-count">Showing <span id="product-count">24</span> of 67 products</p>
+        <button class="load-more" style="display: none;">Load More</button>
+      </div>
+      
+      <div class="product-grid" id="product-grid">
+        <!-- Products will be dynamically loaded here -->
+        <article class="product-card" data-product-id="1">
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=400" alt="Sunset Mini Dress">
+            <div class="product-badges">
+              <span class="badge new">New</span>
+              <span class="badge sustainable">Eco</span>
+            </div>
+            <button class="wishlist-btn" aria-label="Add to wishlist">♡</button>
+            <div class="quick-actions">
+              <button class="quick-view" aria-label="Quick view">👁</button>
+              <button class="quick-add" aria-label="Quick add to cart">+</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3>Sunset Mini Dress</h3>
+            <p class="product-rating">★★★★☆ <span>(127)</span></p>
+            <div class="product-colors">
+              <span class="color-dot" style="background: #ff6b6b"></span>
+              <span class="color-dot" style="background: #4ecdc4"></span>
+              <span class="color-dot" style="background: #ffe66d"></span>
+            </div>
+            <p class="product-price">$48 <span class="original-price">$60</span></p>
+            <div class="product-sizes">
+              <span class="size-available">XS</span>
+              <span class="size-available">S</span>
+              <span class="size-available">M</span>
+              <span class="size-unavailable">L</span>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Repeat similar product cards -->
+        <article class="product-card" data-product-id="2">
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=400" alt="Vintage Denim Jacket">
+            <div class="product-badges">
+              <span class="badge sale">-25%</span>
+            </div>
+            <button class="wishlist-btn" aria-label="Add to wishlist">♡</button>
+          </div>
+          <div class="product-info">
+            <h3>Vintage Denim Jacket</h3>
+            <p class="product-rating">★★★★★ <span>(89)</span></p>
+            <div class="product-colors">
+              <span class="color-dot" style="background: #4169e1"></span>
+              <span class="color-dot" style="background: #000"></span>
+            </div>
+            <p class="product-price">$72 <span class="original-price">$96</span></p>
+          </div>
+        </article>
+        
+        <!-- Add more product cards as needed -->
+      </div>
+      
+      <div class="pagination">
+        <button class="page-btn" disabled>Previous</button>
+        <button class="page-btn active">1</button>
+        <button class="page-btn">2</button>
+        <button class="page-btn">3</button>
+        <button class="page-btn">Next</button>
+      </div>
+    </section>
+  </div>
+</main>
+
+<!-- Quick View Modal -->
+<div class="modal-overlay" id="quick-view-modal" aria-hidden="true">
+  <div class="modal-content" role="dialog" aria-labelledby="modal-title">
+    <button class="modal-close" aria-label="Close modal">✕</button>
+    <div class="modal-body">
+      <div class="modal-image">
+        <img src="" alt="" id="modal-product-image">
+      </div>
+      <div class="modal-info">
+        <h2 id="modal-title">Product Name</h2>
+        <p class="modal-rating">★★★★☆ (127 reviews)</p>
+        <p class="modal-price">$48</p>
+        <div class="modal-colors">
+          <!-- Color options -->
+        </div>
+        <div class="modal-sizes">
+          <!-- Size options -->
+        </div>
+        <button class="btn primary modal-add-to-cart">Add to Bag</button>
+        <button class="btn secondary">View Full Details</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+<script src="plp-enhanced.js"></script>
+</body>
+</html>

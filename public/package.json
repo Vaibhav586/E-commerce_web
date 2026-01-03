@@ -1,0 +1,50 @@
+{
+  "name": "brandname-ecommerce",
+  "version": "1.0.0",
+  "description": "Premium Gen Z-focused women's fashion e-commerce platform",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx live-server --port=3000",
+    "build": "npm run minify-css && npm run minify-js",
+    "minify-css": "npx clean-css-cli -o dist/styles.min.css styles.css",
+    "minify-js": "npx terser script.js plp-enhanced.js -o dist/script.min.js",
+    "optimize-images": "npx imagemin images/* --out-dir=dist/images",
+    "lighthouse": "npx lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": [
+    "ecommerce",
+    "fashion",
+    "gen-z",
+    "responsive",
+    "pwa",
+    "accessibility",
+    "sustainable"
+  ],
+  "author": "BrandName Team",
+  "license": "MIT",
+  "devDependencies": {
+    "clean-css-cli": "^5.6.2",
+    "terser": "^5.19.4",
+    "imagemin": "^8.0.1",
+    "imagemin-webp": "^7.0.0",
+    "lighthouse": "^11.0.0",
+    "live-server": "^1.2.2",
+    "serve": "^14.2.1"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brandname/ecommerce-website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/brandname/ecommerce-website/issues"
+  },
+  "homepage": "https://brandname.com"
+}
