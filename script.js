@@ -14,10 +14,13 @@ class EcommerceApp {
   }
 
   init() {
-    this.bindEvents();
-    this.updateCartCount();
-    this.initializeAnimations();
-    this.setupAccessibility();
+    // Use setTimeout to ensure DOM is fully ready
+    setTimeout(() => {
+      this.bindEvents();
+      this.updateCartCount();
+      this.initializeAnimations();
+      this.setupAccessibility();
+    }, 0);
   }
 
   // ================= CART MANAGEMENT =================
@@ -118,6 +121,19 @@ class EcommerceApp {
     // Promo bar close
     document.querySelector('.promo-bar button')?.addEventListener('click', (e) => {
       e.target.closest('.promo-bar').style.display = 'none';
+    });
+
+    // Hero content close button - use event delegation for reliability
+    document.addEventListener('click', (e) => {
+      if (e.target.closest('.hero-close')) {
+        e.preventDefault();
+        e.stopPropagation();
+        const heroContent = document.querySelector('.hero-content');
+        if (heroContent) {
+          heroContent.style.display = 'none';
+          this.announceToScreenReader('Hero popup closed');
+        }
+      }
     });
 
     // Mobile menu toggle
@@ -318,7 +334,7 @@ class EcommerceApp {
           <img src="#" alt="Product">
           <div>
             <h4>French Riviera Mini Dress</h4>
-            <p>$48</p>
+            <p>₹3,200</p>
           </div>
         </div>
       `;
@@ -359,7 +375,7 @@ class EcommerceApp {
           </div>
         </div>
         <div class="cart-item-price">
-          <p>$${(item.price * item.quantity).toFixed(2)}</p>
+          <p>₹${(item.price * item.quantity).toFixed(2)}</p>
           <button onclick="app.removeFromCart('${item.id}', '${item.size}', '${item.color}')" aria-label="Remove item">✕</button>
         </div>
       </article>
@@ -378,7 +394,7 @@ class EcommerceApp {
       ${this.cart.length > 0 ? `
         <div class="cart-footer">
           <div class="cart-total">
-            <h3>Total: $${total.toFixed(2)}</h3>
+            <h3>Total: ₹${total.toFixed(2)}</h3>
           </div>
           <button class="btn primary" onclick="app.goToCheckout()">Checkout</button>
         </div>
@@ -447,24 +463,8 @@ class EcommerceApp {
 
   // ================= ANIMATIONS =================
   initializeAnimations() {
-    // Intersection Observer for scroll animations
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate-in');
-        }
-      });
-    }, observerOptions);
-
-    // Observe elements for animation
-    document.querySelectorAll('.value-props article, .product-card, .collection-grid article').forEach(el => {
-      observer.observe(el);
-    });
+    // Animation disabled - all sections remain static to prevent overlap
+    // Elements are visible by default, no scroll-triggered animations
   }
 
   handleScroll() {
@@ -475,12 +475,7 @@ class EcommerceApp {
       header.classList.toggle('scrolled', scrolled);
     }
     
-    // Parallax effect for hero
-    const hero = document.querySelector('.hero');
-    if (hero && window.scrollY < window.innerHeight) {
-      const scrolled = window.scrollY;
-      hero.style.transform = `translateY(${scrolled * 0.5}px)`;
-    }
+    // Removed parallax effect to prevent overlap with social proof section
   }
 
   // ================= ACCESSIBILITY =================
@@ -798,17 +793,20 @@ const additionalStyles = `
 
 .skip-link:focus {
   position: absolute;
-  top: var(--space-4);
-  left: var(--space-4);
-  background: var(--primary);
+  top: 0;
+  left: 0;
+  background: var(--gold-primary);
   color: var(--white);
-  padding: var(--space-2) var(--space-4);
-  border-radius: var(--radius-md);
+  padding: 8px 16px;
+  border-radius: 0 0 4px 0;
   z-index: 1000;
+  outline: 2px solid var(--gold-primary);
+  outline-offset: 2px;
 }
 
 .animate-in {
-  animation: slideInUp 0.6s ease forwards;
+  opacity: 1;
+  /* Animation disabled to prevent overlap - all sections remain static */
 }
 
 @keyframes slideInUp {

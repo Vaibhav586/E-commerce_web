@@ -21,8 +21,8 @@
   <meta property="og:title" content="Kaurani – Blending Everyday Comfort with Elegance" />
   <meta property="og:description" content="Discover Kaurani's elegant collection blending everyday comfort with timeless sophistication." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://brandname.com" />
-  <meta property="og:image" content="https://brandname.com/og-image.jpg" />
+  <meta property="og:url" content="https://kaurani.com" />
+  <meta property="og:image" content="https://kaurani.com/kaurani-hero.jpeg" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,14 +47,14 @@
 
     <a href="/" class="logo" aria-label="Homepage">
       <img src="kaurani-hero.jpeg" alt="Kaurani Logo" class="logo-img">
-      <span>Kaurani</span>
+      <span>Kauरानी</span>
     </a>
 
     <nav class="main-nav" role="navigation">
-      <button class="nav-link has-mega" aria-expanded="false">Shop</button>
-      <a href="#new">New</a>
-      <button class="nav-link has-dropdown">Collections</button>
-      <a href="#sale" class="sale">Sale</a>
+      <a href="shop.html" class="nav-link has-mega">Shop</a>
+      <a href="new.html" class="nav-link">New</a>
+      <a href="collections.html" class="nav-link">Collections</a>
+      <a href="shop.html#sale" class="sale">Sale</a>
     </nav>
 
     <div class="header-actions">
@@ -84,11 +84,11 @@
 
       <div class="mega-images">
         <article>
-          <img src="#" alt="Royal Heritage Collection">
+          <img src="kaurani-hero.jpeg" alt="Royal Heritage Collection">
           <span>Royal Heritage</span>
         </article>
         <article>
-          <img src="#" alt="Contemporary Elegance Collection">
+          <img src="kaurani-hero.jpeg" alt="Contemporary Elegance Collection">
           <span>Contemporary Elegance</span>
         </article>
       </div>
@@ -112,8 +112,9 @@
   </div>
   
   <div class="hero-content">
+    <button class="hero-close" aria-label="Close hero popup">✕</button>
     <p class="eyebrow">HERITAGE COLLECTION</p>
-    <h1>Blending Everyday Comfort with Elegance</h1>
+    <h1>Where everyday comfort becomes elegant</h1>
     <p>Discover timeless pieces that celebrate tradition while embracing modern sophistication.</p>
 
     <div class="hero-actions">
@@ -141,7 +142,7 @@
   <article>
     <span>🚚</span>
     <h3>Free Shipping</h3>
-    <p>Orders over $50</p>
+    <p>Orders over ₹2000</p>
   </article>
   <article>
     <span>↩️</span>
@@ -196,7 +197,7 @@
 
   <section class="product-grid" role="list">
     <article role="listitem" class="product-card">
-      <img src="#" alt="Golden Silk Kurta Set">
+      <img src="kaurani-hero.jpeg" alt="Golden Silk Kurta Set">
       <h3>Golden Silk Kurta Set</h3>
       <p>★★★★★ 4.9</p>
       <p>₹3,200 <span>₹4,000</span></p>
@@ -208,7 +209,7 @@
 <!-- ================= PRODUCT DETAIL PAGE ================= -->
 <section id="pdp">
   <div class="gallery">
-    <img src="#" alt="Product image">
+    <img src="kaurani-hero.jpeg" alt="Product image">
   </div>
 
   <div class="product-info">
@@ -266,40 +267,56 @@
 </section>
 
 <!-- ================= ACCOUNT ================= -->
-<section id="account">
+  <section id="account">
   <h2>My Account</h2>
   <nav>
-    <a>Orders</a>
-    <a>Wishlist</a>
-    <a>Rewards</a>
-    <a>Settings</a>
+    <a href="#orders">Orders</a>
+    <a href="#wishlist">Wishlist</a>
+    <a href="#rewards">Rewards</a>
+    <a href="#settings">Settings</a>
   </nav>
 </section>
 
 <!-- ================= FOOTER ================= -->
 <footer role="contentinfo">
-  <section>
-    <h4>Shop</h4>
-    <a>New</a><a>Sale</a><a>All</a>
-  </section>
+  <div class="footer-content">
+    <div class="footer-section">
+      <h4>Shop</h4>
+      <div class="footer-links">
+        <a href="new.html">New</a>
+        <a href="shop.html#sale">Sale</a>
+        <a href="shop.html">All</a>
+      </div>
+    </div>
 
-  <section>
-    <h4>Help</h4>
-    <a>Contact</a><a>Returns</a>
-  </section>
+    <div class="footer-section">
+      <h4>Help</h4>
+      <div class="footer-links">
+        <a href="#contact">Contact</a>
+        <a href="#returns">Returns</a>
+      </div>
+    </div>
 
-  <section>
-    <h4>About</h4>
-    <a>Our Story</a><a>Sustainability</a>
-  </section>
+    <div class="footer-section">
+      <h4>About</h4>
+      <div class="footer-links">
+        <a href="#about">Our Story</a>
+        <a href="#sustainability">Sustainability</a>
+      </div>
+    </div>
 
-  <section>
-    <h4>Connect</h4>
-    <a>Instagram</a>
-    <a>TikTok</a>
-  </section>
+    <div class="footer-section">
+      <h4>Connect</h4>
+      <div class="footer-links">
+        <a href="https://instagram.com/kaurani" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://tiktok.com/@kaurani" target="_blank" rel="noopener noreferrer">TikTok</a>
+      </div>
+    </div>
+  </div>
 
-  <p>© 2026 Kaurani. All rights reserved.</p>
+  <div class="footer-bottom">
+    <p>© 2026 Kaurani. All rights reserved.</p>
+  </div>
 </footer>
 <script src="script.js"></script>
 </body>

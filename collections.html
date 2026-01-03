@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Collections - Kaurani</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ================= PROMO BAR ================= -->
+<div class="promo-bar" role="region" aria-label="Promotions">
+  <p>Complimentary Shipping on Orders Above ₹2000 • Premium Members Get 20% Off</p>
+  <button aria-label="Close promotion">✕</button>
+</div>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header" role="banner">
+  <div class="header-inner">
+
+    <button class="mobile-menu-btn" aria-label="Open menu">☰</button>
+
+    <a href="index.html" class="logo" aria-label="Homepage">
+      <img src="kaurani-hero.jpeg" alt="Kaurani Logo" class="logo-img">
+      <span>Kauरानी</span>
+    </a>
+
+    <nav class="main-nav" role="navigation">
+      <a href="shop.html" class="nav-link has-mega">Shop</a>
+      <a href="new.html" class="nav-link">New</a>
+      <a href="collections.html" class="nav-link active">Collections</a>
+      <a href="shop.html#sale" class="sale">Sale</a>
+    </nav>
+
+    <div class="header-actions">
+      <button aria-label="Search">🔍</button>
+      <button aria-label="Wishlist">♡</button>
+      <button aria-label="Account">👤</button>
+      <button aria-label="Cart">
+        🛍 <span class="cart-count">0</span>
+      </button>
+    </div>
+
+  </div>
+
+  <!-- ========== MEGA MENU ========== -->
+  <section class="mega-menu" aria-hidden="true">
+    <div class="mega-grid">
+      <div>
+        <h4>Categories</h4>
+        <ul>
+          <li><a href="shop.html">Kurtas & Tunics</a></li>
+          <li><a href="shop.html">Sarees & Lehengas</a></li>
+          <li><a href="shop.html">Palazzo & Pants</a></li>
+          <li><a href="shop.html">Jackets & Shrugs</a></li>
+          <li><a href="shop.html">Jewelry & Accessories</a></li>
+        </ul>
+      </div>
+
+      <div class="mega-images">
+        <article>
+          <img src="kaurani-hero.jpeg" alt="Royal Heritage Collection">
+          <span>Royal Heritage</span>
+        </article>
+        <article>
+          <img src="kaurani-hero.jpeg" alt="Contemporary Elegance Collection">
+          <span>Contemporary Elegance</span>
+        </article>
+      </div>
+
+      <div>
+        <h4>Trending Now</h4>
+        <ul>
+          <li><a href="shop.html">Silk Kurtas</a></li>
+          <li><a href="shop.html">Embroidered Dupattas</a></li>
+          <li><a href="shop.html">Designer Palazzo Sets</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</header>
+
+<main class="plp-page">
+  <div class="plp-header">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+          <li><a href="index.html">Home</a></li>
+          <li aria-current="page">Collections</li>
+        </ol>
+      </nav>
+      
+      <div class="plp-title-section">
+        <h1>Our Collections</h1>
+        <p class="plp-description">Explore our curated collections of timeless elegance</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" style="max-width: 1200px; margin: 60px auto; padding: 0 20px;">
+    <section id="collections">
+      <div class="collection-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
+        <article style="height: 400px; background: linear-gradient(135deg, var(--gold-light), var(--cream)); border-radius: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer; transition: all 0.3s ease; border: 2px solid transparent; position: relative; overflow: hidden;">
+          <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('kaurani-hero.jpeg') center/cover; opacity: 0.3;"></div>
+          <h3 style="font-size: 28px; color: var(--text-dark); z-index: 1; text-align: center; padding: 20px;">Royal Heritage</h3>
+          <p style="color: var(--text-light); z-index: 1; text-align: center; padding: 0 20px;">Timeless pieces inspired by traditional craftsmanship</p>
+        </article>
+        
+        <article style="height: 400px; background: linear-gradient(135deg, var(--gold-light), var(--cream)); border-radius: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer; transition: all 0.3s ease; border: 2px solid transparent; position: relative; overflow: hidden;">
+          <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('kaurani-hero.jpeg') center/cover; opacity: 0.3;"></div>
+          <h3 style="font-size: 28px; color: var(--text-dark); z-index: 1; text-align: center; padding: 20px;">Contemporary Elegance</h3>
+          <p style="color: var(--text-light); z-index: 1; text-align: center; padding: 0 20px;">Modern designs with classic sophistication</p>
+        </article>
+        
+        <article style="height: 400px; background: linear-gradient(135deg, var(--gold-light), var(--cream)); border-radius: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer; transition: all 0.3s ease; border: 2px solid transparent; position: relative; overflow: hidden;">
+          <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('kaurani-hero.jpeg') center/cover; opacity: 0.3;"></div>
+          <h3 style="font-size: 28px; color: var(--text-dark); z-index: 1; text-align: center; padding: 20px;">Festive Grandeur</h3>
+          <p style="color: var(--text-light); z-index: 1; text-align: center; padding: 0 20px;">Celebrate special occasions in style</p>
+        </article>
+        
+        <article style="height: 400px; background: linear-gradient(135deg, var(--gold-light), var(--cream)); border-radius: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer; transition: all 0.3s ease; border: 2px solid transparent; position: relative; overflow: hidden;">
+          <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('kaurani-hero.jpeg') center/cover; opacity: 0.3;"></div>
+          <h3 style="font-size: 28px; color: var(--text-dark); z-index: 1; text-align: center; padding: 20px;">Everyday Luxury</h3>
+          <p style="color: var(--text-light); z-index: 1; text-align: center; padding: 0 20px;">Comfort meets elegance for daily wear</p>
+        </article>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer role="contentinfo">
+  <div class="footer-content">
+    <div class="footer-section">
+      <h4>Shop</h4>
+      <div class="footer-links">
+        <a href="new.html">New</a>
+        <a href="shop.html#sale">Sale</a>
+        <a href="shop.html">All</a>
+      </div>
+    </div>
+
+    <div class="footer-section">
+      <h4>Help</h4>
+      <div class="footer-links">
+        <a href="#contact">Contact</a>
+        <a href="#returns">Returns</a>
+      </div>
+    </div>
+
+    <div class="footer-section">
+      <h4>About</h4>
+      <div class="footer-links">
+        <a href="#about">Our Story</a>
+        <a href="#sustainability">Sustainability</a>
+      </div>
+    </div>
+
+    <div class="footer-section">
+      <h4>Connect</h4>
+      <div class="footer-links">
+        <a href="https://instagram.com/kaurani" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://tiktok.com/@kaurani" target="_blank" rel="noopener noreferrer">TikTok</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Kaurani. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+
